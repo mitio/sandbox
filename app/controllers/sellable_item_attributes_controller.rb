@@ -1,4 +1,6 @@
 class SellableItemAttributesController < ApplicationController
+  before_filter :set_sellable_item
+
   # GET /sellable_item_attributes
   # GET /sellable_item_attributes.json
   def index
@@ -79,5 +81,11 @@ class SellableItemAttributesController < ApplicationController
       format.html { redirect_to sellable_item_attributes_url }
       format.json { head :ok }
     end
+  end
+
+  protected
+
+  def set_sellable_item
+    @sellable_item = SellableItem.find params[:sellable_item_id] unless params[:sellable_item_id].blank?
   end
 end
