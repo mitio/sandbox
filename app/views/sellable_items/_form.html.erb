@@ -1,0 +1,25 @@
+<%= form_for(@sellable_item) do |f| %>
+  <% if @sellable_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sellable_item.errors.count, "error") %> prohibited this sellable_item from being saved:</h2>
+
+      <ul>
+      <% @sellable_item.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :sellable_item_category_id %><br />
+    <%= f.collection_select :sellable_item_category_id, SellableItemCategory.all, :id, :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

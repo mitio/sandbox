@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @sellable_item_attribute.name %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @sellable_item_attribute.value %>
+</p>
+
+
+<%= link_to 'Edit', edit_sellable_item_attribute_path(@sellable_item_attribute) %> |
+<%= link_to 'Back', sellable_item_attributes_path %>

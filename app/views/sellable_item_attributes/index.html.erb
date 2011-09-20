@@ -1,0 +1,18 @@
+<h1>Listing sellable_item_attributes</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Value</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sellable_item_attributes.each do |sellable_item_attribute| %>
+  <tr>
+    <td><%= sellable_item_attribute.name %></td>
+    <td><%= sellable_item_attribute.value %></td>
+  </tr>
+<% end %>
+</table>

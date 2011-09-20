@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @sellable_item.name %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @sellable_item.sellable_item_category.name %>
+</p>
+
+<p>
+  <strong>Attributes:</strong>
+  <ul>
+  <% @sellable_item.sellable_item_attributes.each do |attribute| %>
+	<li><strong><%= attribute.name %>:</strong> <%= attribute.value %></li>
+  <% end %>
+    <li><%= link_to 'New Attribute', new_sellable_item_sellable_item_attribute_path(@sellable_item) %></li>
+  </ul>
+</p>
+
+<%= link_to 'Edit', edit_sellable_item_path(@sellable_item) %> |
+<%= link_to 'Back', sellable_items_path %>

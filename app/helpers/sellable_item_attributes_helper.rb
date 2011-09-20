@@ -1,0 +1,2 @@
+module SellableItemAttributesHelper
+end

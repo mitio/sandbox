@@ -1,0 +1,23 @@
+<h1>Listing sellable_items</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sellable_items.each do |sellable_item| %>
+  <tr>
+    <td><%= sellable_item.name %></td>
+    <td><%= link_to 'Show', sellable_item %></td>
+    <td><%= link_to 'Edit', edit_sellable_item_path(sellable_item) %></td>
+    <td><%= link_to 'Destroy', sellable_item, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Sellable item', new_sellable_item_path %>
