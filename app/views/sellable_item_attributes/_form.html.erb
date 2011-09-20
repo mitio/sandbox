@@ -1,3 +1,8 @@
 <%= form_for [@sellable_item, @sellable_item_attribute] do |f| %>
-  
+  <p><%= f.label :name %></p>
+  <p><%= f.text_field :name %></p>
+  <p><%= f.label :value %></p>
+  <p><%= f.text_field :value %></p>
+
+  <p><%= f.submit %></p>
 <% end %>
