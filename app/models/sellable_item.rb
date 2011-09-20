@@ -12,5 +12,12 @@ class SellableItem
   
   # Validations.
   validates_presence_of :name
-  
+
+  # Prettier rendering in strings.
+  # An alternative way:
+  #
+  #   def to_s
+  #     "#{name} (ID #{id})"
+  #   end
+  alias_method :to_s, :name
 end
