@@ -86,6 +86,6 @@ class SellableItemAttributesController < ApplicationController
   protected
 
   def set_sellable_item
-    @sellable_item = SellableItem.find params[:sellable_item_id] unless params[:sellable_item_id].blank?
+    @sellable_item = SellableItem.find params[:sellable_item_id]
   end
 end
