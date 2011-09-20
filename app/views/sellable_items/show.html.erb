@@ -11,7 +11,7 @@
 </p>
 
 <p>
-  <strong>Attributes:</strong>
+  <strong>Attributes (<%= link_to 'View all', sellable_item_sellable_item_attributes_path(@sellable_item) %>):</strong>
   <ul>
   <% @sellable_item.sellable_item_attributes.each do |attribute| %>
 	<li><strong><%= attribute.name %>:</strong> <%= attribute.value %></li>
