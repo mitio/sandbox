@@ -1,5 +1,7 @@
 <h1>Listing sellable_item_attributes</h1>
 
+<%= link_to "Add new attribute to #{@sellable_item}", new_sellable_item_sellable_item_attribute_path(@sellable_item) %>
+
 <table>
   <tr>
     <th>Name</th>
@@ -16,3 +18,5 @@
   </tr>
 <% end %>
 </table>
+
+<p><%= link_to "&larr; Back to the sellable item #{@sellable_item}".html_safe, @sellable_item %></p>
