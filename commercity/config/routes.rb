@@ -1,11 +1,11 @@
 Commercity::Application.routes.draw do
-  
+
   resources :sellable_items do
-  	resources :sellable_item_attributes
+    resources :sellable_item_attributes
   end
-  
+
   resources :sellable_item_categories
-  
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
