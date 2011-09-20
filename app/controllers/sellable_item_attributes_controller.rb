@@ -46,7 +46,7 @@ class SellableItemAttributesController < ApplicationController
 
     respond_to do |format|
       if @sellable_item_attribute.save
-        format.html { redirect_to @sellable_item_attribute, notice: 'Sellable item attribute was successfully created.' }
+        format.html { redirect_to [@sellable_item, @sellable_item_attribute], notice: 'Sellable item attribute was successfully created.' }
         format.json { render json: @sellable_item_attribute, status: :created, location: @sellable_item_attribute }
       else
         format.html { render action: "new" }
@@ -62,7 +62,7 @@ class SellableItemAttributesController < ApplicationController
 
     respond_to do |format|
       if @sellable_item_attribute.update_attributes(params[:sellable_item_attribute])
-        format.html { redirect_to @sellable_item_attribute, notice: 'Sellable item attribute was successfully updated.' }
+        format.html { redirect_to [@sellable_item, @sellable_item_attribute], notice: 'Sellable item attribute was successfully updated.' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }
